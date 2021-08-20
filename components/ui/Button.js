@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet, Text } from 'react-native';
-export default function Separator({ text, onPress, bgColor, color, uppercase }) {
+export default function Separator({ text, onPress, bgColor, color }) {
   return (
     <TouchableOpacity style={[styles.button, { backgroundColor: bgColor || '#000000' }]} onPress={onPress}>
       <Text style={[styles.buttonText, { color: color || '#ffffff' }]}>{text}</Text>

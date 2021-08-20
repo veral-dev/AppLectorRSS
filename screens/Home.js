@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { StatusBar, SafeAreaView, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import InfoContext from '../context/InfoProvider/InfoContext';
-import Button from '../components/Button';
-import Space from '../components/Space';
 
 // Ui & Styles
-import Card from '../components/Card';
-import Spinner from '../components/Spinner';
+import Button from '../components/ui/Button';
+import Space from '../components/ui/Space';
+import Card from '../components/ui/Card';
+import Spinner from '../components/ui/Spinner';
 import { general } from '../styles/GeneralStyles';
 
 export default function Home({ navigation }) {
@@ -45,6 +45,7 @@ export default function Home({ navigation }) {
             <Button text=">" bgColor="#4630EB" onPress={() => search()} />
           </View>
           <TouchableOpacity onPress={() => setAll()}>
+            <Space size={10} />
             <Text style={[general.p]}>Ver todos</Text>
           </TouchableOpacity>
           <Card data={newsList} onPress={(title) => navigation.navigate('Details', title)} />

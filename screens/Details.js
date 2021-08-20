@@ -3,9 +3,9 @@ import { StatusBar, SafeAreaView, Text, StyleSheet, Image, Linking, View } from 
 import InfoContext from '../context/InfoProvider/InfoContext';
 
 // Ui & Styles
-import Space from '../components/Space';
-import Button from '../components/Button';
-import Spinner from '../components/Spinner';
+import Space from '../components/ui/Space';
+import Button from '../components/ui/Button';
+import Spinner from '../components/ui/Spinner';
 import { general } from '../styles/GeneralStyles';
 
 export default function Details({ route }) {

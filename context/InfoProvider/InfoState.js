@@ -21,6 +21,9 @@ export default function InfoProvider({ children }) {
       const resp = await axios.get(
         'https://newsapi.org/v2/everything?q=españa&pageSize=10&from=2021-08-19&sortBy=popularity&apiKey=bd6c74c749ad4944832a59434b8fb4a0'
       );
+      resp.data.articles.sort((a, b) => {
+        return new Date(b.publishedAt) - new Date(a.publishedAt);
+      });
       setStorage(resp.data.articles);
       dispatch({
         type: FETCH_NEWS,
