@@ -1,11 +1,13 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
-const App = () => (
-  <View style={[styles.container, styles.horizontal]}>
-    <ActivityIndicator size="large" color="#4630EB" />
-  </View>
-);
+export default function Spinner() {
+  return (
+    <View style={[styles.container, styles.horizontal]}>
+      <ActivityIndicator size="large" color="#4630EB" />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -19,5 +21,3 @@ const styles = StyleSheet.create({
     padding: 10
   }
 });
-
-export default App;
